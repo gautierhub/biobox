@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.5.8/dist/css/splide.min.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="Shortcut icon" href="https://www.biocoop.fr/bundles/biocoopsite/images/favicon.ico?v18"
+        type="image/x-icon">
+    <title>BioBox</title>
+</head>
+
+<body>
+    <header>
+        <div class="header__wrap">
+            <img class="logo" src="Ressources/images/logo.jpg" alt="BioCoop Logo">
+        </div>
+    </header>
+
+    <section class="landing">
+        <img class="img_centered logo gs_reveal" src="Ressources/images/logoBiobox.svg" />
+        <div class="landing__column gs_reveal">
+            <div class="landing__text">
+                <p>
+                    Conçue pour les jeunes. Cette box contient les meilleurs ingrédients adaptés aux saisons issus de
+                    l’agriculture 100% biologique française par des producteurs locaux et passionnés !
+                    <br />
+                    <br />
+                    Chaque mois retrouvez au choix 1 box avec des plats déjà préparés ou 1 box avec des produits pour
+                    concocter
+                    vos recettes.Découvrez chaque mois de nouvelles recettes simples à réaliser en moins de 30 minutes.
+                </p>
+            </div>
+            <img class="img_centered gs_reveal" src="Ressources/images/bioBox.svg" alt="" />
+            <a class="btn gs_reveal" href="#comment">Comment ça marche ?</a>
+        </div>
+        </div>
+    </section>
+
+    <section class="comment_ca_marche" id="comment">
+        <div>
+            <h2 class="gs_reveal">Comment ça marche ?</h2>
+            <img class="img_centered gs_reveal" src="Ressources/images/commande.svg" alt="" />
+            <p class="gs_reveal">
+                Commande ta Biobox à n’importe quel moment de la journée en te rendant sur notre site www.biocoop.fr
+                <br />
+                <br />
+                Choisis ton point de retrait en point relais.
+                <br />
+                <br />
+                Clique sur « continuer » pour procéder au paiement sécurisé.
+                <br />
+                Indique tes coordonnées ou connectes-toi à ton compte client pour accéder à tes informations.
+                <br />
+                <br />
+                <strong>Où récupérer ma Biobox ?</strong>
+                <br />
+                <br />
+                Avec Biobox, une fois la commande réalisée sur notre site récupère dans le magasin de ton choix.
+                <br />
+                <br />
+                Tu peux récupérer ta commande dans le Biocoop de ton choix au niveau du stand Biobox du lundi au samedi
+                de 17h à
+                20h (retrouvez les horaires de nos magasins).
+            </p>
+        </div>
+    </section>
+    <section class="consigne">
+        <div>
+            <h2 class="gs_reveal">Système de consigne</h2>
+            <img class="img_centered gs_reveal" src="Ressources/images/bocal.svg" alt="" />
+            <p class="gs_reveal">
+                Pour réduire l’impact écologique et favoriser la réduction des déchets à l’intérieur de ta box tu y
+                découvriras
+                des contenants en verres qui sont :
+                <br />
+                <br />
+                • Des bocaux en verre
+                <br />
+                • Réutilisable
+                <br />
+                • Échangeable grâce à un système de consigne
+                <br />
+                • Et utilisable dans tous les établissements Biocoop de notre liste (carte)
+                <br />
+                <br />
+                Pour ta première commande, tu payeras une consigne de 4€. Pour obtenir le remboursement automatique du
+                montant
+                de ta consigne versée, rendez-vous dans le Biocoop où tu as récupéré ta box.
+                <br />
+                <br />
+                <strong>Retour en magasin</strong>
+                <br />
+                <br />
+                Les contenants seront récupérés et lavés pour te revenir en main comme neuves dans le Biocoop où tu as
+                récupéré ta Biobox.
+                <br />
+                <br />
+                <strong>Si j’ai cassé mon contenant que faire ?</strong>
+                <br />
+                <br />
+                En vous rendant dans votre magasin ou vous avez récupéré votre commande veuillez le signaler. La
+                consigne de ne
+                te sera pas restitué. Tu devras repayer la consigne pour ta prochaine Biobox.
+            </p>
+        </div>
+    </section>
+
+    <section class="map">
+        <div>
+            <h2 class="gs_reveal">Trouve ton magasin Biocoop</h2>
+            <div class="search gs_reveal">
+                <span></span>
+                <input placeholder="Recherche ton magasin Biocoop" type="search" name="" id="">
+            </div>
+            <div id="map"></div>
+            <a class="btn gs_reveal" href="#selectionne">Découvres nos box</a>
+        </div>
+    </section>
+
+    <section class="selectionne" id="selectionne">
+        <div>
+            <h2>Sélectionne ta Biobox</h2>
+            <p>Manges mieux et gagne du temps avec la Biobox !</p>
+
+            <div class="select__boxbutton">
+                <button class="btn" onclick="switchbox()">Box à cuisiner</button>
+                <button class="btn inactive" onclick="switchbox()">Box prête à l’emploi</button>
+            </div>
+
+            <div class="select__switch" style="display: flex; width: 200VW;">
+                <div style="width: 42%;">
+                    <img style="width: 95%; margin-top: 15px;" src="Ressources/images/poel.gif" alt="" srcset="">
+                    <p><br>Chaque box à cuisiner est composé de 10 à 15 produits culinaires par box,
+                        accompagnés de votre
+                        livret
+                        de
+                        recettes. <br><br>
+
+                        Dans la box de novembre tu y trouveras :<br><br>
+
+                        • Coquillettes<br>
+                        • Brocoli<br>
+                        • Champignons<br>
+                        • Tofu<br><br>
+
+                        Et pleins d’autres surprises pour te concocter d’appétissants plats et pas que !
+                    </p>
+                </div>
+                <div style="margin-left: 8%; width: 42%;">
+                    <img style="margin-left: 5px; width: 95%; margin-top: 15px;" src="Ressources/images/fourchette.gif"
+                        alt="" srcset="">
+                    <p>
+                        Pas le temps de cuisiner ? Tu n’aimes tout simplement pas cuisiner ?<br><br>
+
+                        Alors la Biobox prête en 2 minutes top chrono est faites pour toi! <br><br>
+
+                        Dans cette box, retrouves-y 4 plats prêt à être dégusté<br><br>
+
+                        Les plats préparés sont réalisés dans nos ateliers.
+                    </p>
+                </div>
+            </div>
+
+            <a class="btn" href="#open-modal">Commande ta Biobox</a>
+        </div>
+        <div id="open-modal" class="modal-window">
+            <div class="popup_page1">
+                <a title="Fermer" class="modal-close">Fermer</a>
+                <h3>On à besoin de quelques informations pour préparer ta box !</h3>
+                <form>
+                    <input type="text" name="nom" placeholder="Nom">
+                    <input type="text" name="prenom" placeholder="Prénom">
+                    <input type="email" name="mail" placeholder="Adresse mail">
+                </form>
+                <img class="img_centered" src="Ressources/images/visage.svg" alt="" />
+                <a class="btn btn_popup">Payer</a>
+            </div>
+            <div class="popup_page2">
+                <h4>Veuillez nous excuser, les méthodes de paiements ne sont pas encore disponibles</h4>
+                <a class="btn btn_popup_fermer">Fermer</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="possible">
+        <h2 class="gs_reveal">C’est possible grâce à eux !</h2>
+        <p class="gs_reveal">La Biobox a pu être conçu grâce à des prix justes pour une bio accessible à tous et exigeante tout en
+            assurant
+            une rémunération directe et favoriser tout en respectant une démarche de commerce équitable « Origine
+            France ».
+        </p>
+
+        <div class="splide gs_reveal">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide"><img src="Ressources/images/farmer1.jpeg"></li>
+                    <li class="splide__slide"><img src="Ressources/images/farmer2.jpeg"></li>
+                    <li class="splide__slide"><img src="Ressources/images/farmer3.jpeg"></li>
+                    <li class="splide__slide"><img src="Ressources/images/farmer4.jpeg"></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="prochaine_box">
+        <h2 class="gs_reveal">Aide nous à créer la prochaine box !</h2>
+        <p class="gs_reveal">
+            Nous avons la volonté de faire correspondre cette box à vos attentes.
+            <br />
+            <br />
+            Des idées ? Des suggestions à nous faire ?
+            <br />
+            Vous avez la parole !
+            <br />
+            <br />
+            Proposez nous les ingrédients que vous souhaiteriez voir dans vos prochaines Biobox.
+        </p>
+        <a class="btn inactif gs_reveal">Momentanément indisponible</a>
+    </section>
+
+    <div class="warning__desktop">
+        <h1>Desktop en cours de développement</h1>
+        <p>Le projet est actuellement disponible seulement en version mobile.</p>
+    </div>
+
+    <footer>
+        <img class="logo" src="Ressources/images/logo.jpg" alt="BioCoop Logo">
+    </footer>
+
+    <script src="Ressources/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"
+        integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"
+        integrity="sha512-CPA5LMoJI/a5HkSIAKcBtFXe4gqGjPUL2ExF/3PmhrrHI17wod9xOqqF+0WZQRKIIq0KwF8oG5BaiWobtrke3A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.5.8/dist/js/splide.min.js"></script>
+    <script src="Ressources/js/anim.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBG3KmRxFIBtPil5I8S6tmbgkJ-XDLbbCw&callback=initMap&libraries=places&v=weekly"
+        async></script>
+</body>
+
+</html>

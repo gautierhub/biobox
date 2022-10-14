@@ -1,0 +1,386 @@
+/* ---------- COLORS ---------- */
+$blue: #164194;
+$green: #AFCA0B;
+$orange: #FBB800;
+$jaune: #E8DA47;
+$jaune_clair: #F6F0C0;
+$rouge: #D8573B;
+$vert: #4CA580;
+$vert_clair: #C0DACD;
+$rose: #BA5282;
+
+/* ---------- TYPOS ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+@font-face {
+    font-family: 'HK Grotesk';
+    src: url('../font/hk-grotesk.regular.otf') format('otf'),
+}
+
+$poppins: 'Poppins',
+sans-serif;
+$grotesk: 'HK Grotesk',
+sans-serif;
+
+body {
+    overflow-x: hidden;
+}
+
+p,
+body {
+    font-family: $poppins;
+    font-weight: 400;
+}
+
+input {
+    font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+.btn {
+    font-family: $poppins;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 24px;
+    text-align: center;
+}
+
+/* ---------- GLOBAL VARS ---------- */
+$border_radius: 10px;
+$box_shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+/* ---------- GLOBAL ---------- */
+*,
+body {
+    scroll-behavior: smooth;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    background-color: $rose;
+    color: white;
+    width: fit-content;
+    padding: 15px 25px;
+    margin: 0 auto;
+    white-space: nowrap;
+    border-radius: $border_radius;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: $box_shadow;
+}
+
+section {
+    padding: 50px 30px;
+}
+
+.img_centered {
+    display: flex;
+    margin: 3em auto;
+    width: 50%;
+}
+
+/* ---------- HEADER & FOOTER ---------- */
+header {
+    background-color: $blue;
+    width: 100%;
+    background-color: #114294;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99999;
+
+    .header__wrap {
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo {
+        width: 175px;
+    }
+}
+
+footer {
+    background-color: $blue;
+    width: 100%;
+    background-color: #114294;
+    display: flex;
+    justify-content: center;
+
+    .logo {
+        width: 125px;
+    }
+}
+
+/* ---------- SECTION LANDING ---------- */
+.landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .logo {
+        margin-top: 60px;
+        margin-bottom: 40px;
+        width: 80%;
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin: 0 20px 0 0;
+    }
+}
+
+/* ---------- SECTION COMMENT CA MARCHE ---------- */
+.comment_ca_marche {
+    background-color: $jaune_clair;
+}
+
+.map {
+    background-color: $vert_clair;
+}
+
+/* ---------- SECTION TROUVE TON MAGASIN ---------- */
+section.map {
+    padding-right: unset;
+    padding-left: unset;
+
+    input[type=search] {
+        padding: 10px 30px 10px 50px;
+        width: 100%;
+        border: unset;
+        border-radius: $border_radius;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    #map {
+        margin: 40px 0;
+        height: 524px;
+    }
+
+    span {
+        background: url("https://img.icons8.com/material-outlined/24/000000/search--v1.png");
+        width: 24px;
+        display: block;
+        height: 24px;
+        position: absolute;
+        margin-left: 15px;
+        opacity: 0.6;
+    }
+
+    .search {
+        display: flex;
+        align-items: center;
+        margin: 20px 30px;
+        position: relative;
+    }
+
+    .btn {
+        margin-top: 40px;
+    }
+}
+
+/* ---------- SECTION SELECTIONNE TA BOX ---------- */
+
+
+.selectionne {
+    overflow: hidden;
+    .select__boxbutton {
+        display: flex;
+        font-size: 14px;
+
+        .btn {
+            margin: 0;
+        }
+
+        button {
+            border: 0;
+            cursor: pointer;
+        }
+
+        button.inactive {
+            background-color: white !important;
+            color: #ba5282 !important;
+        }
+
+        button:nth-child(1) {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        button:nth-child(2) {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+}
+
+.modal-window {
+    position: fixed;
+    background-color: rgba(63, 63, 63, 0.5);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+
+    &:target {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    &>div {
+        width: 75%;
+        border-radius: $border_radius;
+        position: absolute;
+        top: 54%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 2em;
+        background: white;
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 24px;
+    }
+
+    h4 {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .btn {
+        width: auto;
+        margin-top: 20px;
+    }
+
+    form {
+        margin: 50px 0 0 0;
+    }
+
+    input {
+        border: none;
+        border-bottom: 1px solid #707070;
+        width: 100%;
+        padding: 0 0 10px 0;
+        font-size: 16px;
+        margin: 0 0 30px 0;
+    }
+
+    img {
+        margin: 1em auto 3em auto;
+    }
+
+    .popup_page2 {
+        display: none;
+
+        h3 {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.modal-close {
+    color: #aaa;
+    line-height: 50px;
+    font-size: 80%;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 70px;
+    text-decoration: none;
+
+    &:hover {
+        color: black;
+    }
+}
+
+/* ---------- SECTION CEST POSSIBLE GRACE A EUX ---------- */
+.possible {
+    background-color: $jaune_clair;
+
+    p {
+        margin: 40px 0;
+    }
+
+    .splide__arrows,
+    .splide__pagination {
+        display: none;
+    }
+
+    .splide__slide {
+        display: flex;
+        justify-content: center;
+        height: 215px;
+        width: 90% !important;
+        padding: 20px;
+
+        img {
+
+            border-radius: $border_radius;
+        }
+    }
+}
+
+/* ---------- SECTION PROCHAINE BOX ---------- */
+.prochaine_box {
+    h2 {
+        margin-bottom: 40px;
+    }
+
+    .inactif {
+        background-color: #b7b7b7;
+        margin-top: 40px;
+    }
+}
+
+/* ---------- BREAKPOINTS ---------- */
+@media screen and (max-width: 600px) {
+    .warning__desktop {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    section {
+        display: none;
+        transform: translateY(-10000000px);
+    }
+
+    html,
+    body {
+        margin: 0;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .warning__desktop {
+        position: fixed;
+        top: 40%;
+        width: 100%;
+        text-align: center;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+    }
+}
